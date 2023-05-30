@@ -1,5 +1,6 @@
 body {
     font-family: 'Playfair Display', serif;
+    font-weight: 400;
     font-size: 14px;
     color: #626262;
 }
@@ -29,14 +30,33 @@ img{
     display: block;
 }
 
+/* Класи елементів */
+
 .container {
-    width: 1200px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.container {
+    /* width: 1200px;
     margin: 0 auto;
     padding-left: 147px;
-    padding-right: 147px;
+    padding-right: 147px; */
 }
 
 /* Меню навігації */
+
+@media screen and (max-width: 767px) {
+    .nav {
+        display: none;
+    }
+
+    .menu-button {
+        border: none;
+        background-color: transparent;
+        padding: 16px;
+    }
+}
 
 .nav {
     margin-top: 70px;
