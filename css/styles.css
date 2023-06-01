@@ -28,6 +28,7 @@ ul {
 
 img{
     display: block;
+    max-width: 100%;
 }
 
 /* Класи елементів */
@@ -37,12 +38,31 @@ img{
     padding-right: 20px;
 }
 
-.container {
-    /* width: 1200px;
-    margin: 0 auto;
-    padding-left: 147px;
-    padding-right: 147px; */
+/* Mobile 480+ */
+
+@media screen and (min-width: 480px) {
+    .container {
+        width: 480px;
+        margin: 0 auto;
+    }
 }
+
+/* tablet 768+ */
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: 768px;
+    }
+}
+
+/* desktop 1200+ */
+
+@media screen and (min-width: 1200px) {
+    .container {
+        width: 1200px;
+    }
+}
+
 
 /* Меню навігації */
 
@@ -55,6 +75,37 @@ img{
         border: none;
         background-color: transparent;
         padding: 16px;
+    }
+
+    .menu-button-close {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        background-color: transparent;
+        border: none;
+    }
+
+    .mobile-menu {
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: auto;
+        background-color: #e5e5e5;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateX(100%);
+    }
+
+    .mobile-menu.is-open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateX(0);
+        transition: opacity 250ms ease-in, transform 250ms ease-in;
     }
 }
 
