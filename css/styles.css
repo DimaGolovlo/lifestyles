@@ -107,6 +107,11 @@ img{
         transform: translateX(0);
         transition: opacity 250ms ease-in, transform 250ms ease-in;
     }
+
+    .mobile-nav-list:not(:last-child) {
+
+    }
+
 }
 
 .nav {
